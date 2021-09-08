@@ -26,8 +26,8 @@
 ## Ui-Clone Instagram
 
 - [About](#about)
-- [Techs](#techs)
 - [The Application](#application)
+- [Techs](#techs)
 - [Clone and use for Free](#clone)
 
 <a id="about"></a>
@@ -35,6 +35,14 @@
 ## :interrobang: About
 
 A simple ui clone of the instagram photo feed, working with image lazy loading and flat list on load reach
+
+<a id="application"></a>
+
+## :sparkles: The Application
+
+<h1 align="center">
+    <img alt="home" src="github/screen_one.png">
+</h1>
 
 <a id="techs"></a>
 
@@ -51,14 +59,6 @@ The project was developed with the technologies below:
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 
-<a id="application"></a>
-
-## :sparkles: The Application
-
-<h1 align="center">
-    <img alt="home" src="github/screen_one.png">
-</h1>
-
 <a id="clone"></a>
 
 ## :octocat:Clone this repo
@@ -66,12 +66,24 @@ The project was developed with the technologies below:
 1. Clone :
 
 ```sh
-  $ git clone https://github.com/VictorGabrielMS/instagram_feed.git
+  $ git clone https://github.com/VictorGabrielMS/uiclone_instagram.git
 ```
 
-2. Execute:
+2. Go to Folder:
+
+```sh
+  $ cd uiclone_instagram
+```
+
+3. Execute:
 
 ```sh
   $ npm install
   $ npm run android
+  # or
+  $ npm run ios
 ```
+
+## :memo: License
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
