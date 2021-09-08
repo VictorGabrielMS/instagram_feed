@@ -86,4 +86,5 @@ The project was developed with the technologies below:
 
 ## :memo: License
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is under MIT LICENSE. for more details follow the link: [LICENSE](LICENSE).
+
