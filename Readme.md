@@ -41,7 +41,9 @@ A simple ui clone of the instagram photo feed, working with image lazy loading a
 ## :sparkles: The Application
 
 <h1 align="center">
-    <img alt="home" src="github/screen_one.png">
+    <img alt="home" src="github/usage.gif" width="32%" >
+    <img alt="home" src="github/screen_one.png" width="32%" >
+    <img alt="home" src="github/screen_two.png" width="32%" >
 </h1>
 
 <a id="techs"></a>
@@ -52,7 +54,7 @@ The project was developed with the technologies below:
 
 - [Javacript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Typescript](https://www.typescriptlang.org/)
-- [React Native](https://expo.io/)
+- [React Native](https://reactnative.dev/)
 - [React Navigation](https://reactnavigation.org/)
 - [Styled Components](https://styled-components.com/)
 - [Json Server](https://www.npmjs.com/package/json-server)
