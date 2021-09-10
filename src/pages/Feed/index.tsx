@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useCallback, useRef, } from 'react';
 import { View, FlatList, Platform, ViewToken, ViewabilityConfig } from 'react-native';
 
+import { Stories } from '../../components/Stories';
 import { LazyImage } from '../../components/LazyImage';
-import { Post, Header, Avatar, Name, Description, Loading } from './styles';
+import { Loading } from './styles';
+import { Post } from '../../components/Post';
 
 interface iOnViewableItemsChanged {
   viewableItems: ViewToken[];
@@ -15,8 +17,9 @@ interface iAuthorData {
   avatar: string;
 }
 
-interface iFeedData {
+export interface iFeedData {
   id: number
+  legend: string
   image: string
   small: string
   aspectRatio: number
@@ -75,10 +78,11 @@ export const Feed: React.FC = () => {
 
   return (
     <View>
-      <FlatList
+      <FlatList<iFeedData>
         data={feed}
         keyExtractor={post => String(post.id)}
         onEndReached={() => loadPage()}
+        ListHeaderComponent={Stories}
         onEndReachedThreshold={0.1}
         onRefresh={refreshList}
         refreshing={refreshing}
@@ -86,23 +90,17 @@ export const Feed: React.FC = () => {
         onViewableItemsChanged={onViewableItemsChanged}
         ListFooterComponent={isLoading ? <Loading /> : <></>}
         renderItem={({ item }) => (
-          <Post>
-            <Header>
-              <Avatar source={{ uri: item.author.avatar }} />
-              <Name>{item.author.name}</Name>
-            </Header>
-
-            <LazyImage
-              shouldLoad={viewable.includes(item.id)}
-              aspectRatio={item.aspectRatio}
-              smallSource={{ uri: item.small }}
-              source={{ uri: item.image }}
-            />
-
-            <Description>
-              <Name>{item.author.name}</Name> {item.description}
-            </Description>
-          </Post>
+          <Post
+            item={item}
+            image={
+              <LazyImage
+                shouldLoad={viewable.includes(item.id)}
+                aspectRatio={item.aspectRatio}
+                smallSource={{ uri: item.small }}
+                source={{ uri: item.image }}
+              />
+            }
+          />
         )}
       />
     </View>
